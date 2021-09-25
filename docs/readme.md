@@ -19,7 +19,7 @@
 	2. 기본정보 및 상세정보를 입력 후, **저장** 버튼을 클릭합니다.
 
 		- 기본정보 입력
-			- + 첨부 : 앱 아이콘 이미지 파일 등록
+			- \+ 첨부 : 앱 아이콘 이미지 파일 등록
 			- **App name**: 등록 할 앱 이름입력 (필수)
 			- OAuth 설정: 3rd Party 개발사가 플랫폼 사용자 인증 시 OAuth 인증 사용 유무 선택
 			- OAuth redirect url: Oauth 인증 시 Access token 전송을 위한 URL 입력
@@ -48,10 +48,10 @@
 	- **IoTMakers 포탈**에서 [**IoT개발** > **SDK 다운로드**](https://iotmakers.kt.com/openp/index.html#/sdk) 를 클릭합니다.
 	- [**Android SDK**](https://iotmakers.kt.com/openp/assets/files/iotmakers_sdk_android_1.3.2.zip)를 다운로드한 후, 압축을 해제합니다.
 3. 압축 해제한 **IoTMakers Android SDK 폴더(*iotmakers.sdk.android-01.03.02-20200408*)를 생성된 Android 프로젝트로 복사**해 온다.
-4. **IoTMakers Android SDK 폴더(*iotmakers.sdk.android-01.03.02-20200408*)**의 **build.gradle** 파일을 다음 그림과 같이 수정한다.
+4. **IoTMakers Android SDK 폴더(iotmakers.sdk.android-01.03.02-20200408)**의 **build.gradle** 파일을 다음 그림과 같이 수정한다.
 	- **allprojects** {..} 주석처리
 	- **wrapper**{...} 를 **task wrapper(type: Wrapper)**{...} 로 변경
-		- [참고] https://docs.gradle.org/current/userguide/upgrading_version_4.html#rel4.8:configure_internal_tasks
+		- [참고 링크](https://docs.gradle.org/current/userguide/upgrading_version_4.html#rel4.8:configure_internal_tasks)
 
 
 	![](figures/android-studio-import-module.jpg)
@@ -80,17 +80,17 @@
 		- 상단의 **Sync Now** 클릭
 
 		- \<application\> 부분에 **android:usesCleartextTraffic="true"** 로 설정
-				
+		
 			```xml
-		    <application
-		        android:allowBackup="true"
-		        android:icon="@mipmap/ic_launcher"
-		        android:label="@string/app_name"
-		        android:roundIcon="@mipmap/ic_launcher_round"
-		        android:supportsRtl="true"
-		        android:theme="@style/AppTheme"
-		        android:usesCleartextTraffic="true">  
-		   	```	
+			<application
+				android:allowBackup="true"
+				android:icon="@mipmap/ic_launcher"
+				android:label="@string/app_name"
+				android:roundIcon="@mipmap/ic_launcher_round"
+				android:supportsRtl="true"
+				android:theme="@style/AppTheme"
+				android:usesCleartextTraffic="true">  
+			```	
 		   	
 		   	- Android 9.0(API level 28) 부터 강화된 네트워크 보안정책으로 인해 특정 도메인에 대해 일반적인 텍스트 사용을 명시적으로 선언한 경우에만 허용함
 
