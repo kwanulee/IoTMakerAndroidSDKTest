@@ -1,17 +1,27 @@
+---
+[**이전**:3.2 디바이스 목록 및 디바이스 상세 조회](devices.md)
+
+---
 
 ### 3.3 디바이스 태그스트림 목록, 태그스트림 로그 조회와 제어 명령 보내기
-- 태그스트림 목록 조회
+- **태그스트림 목록 조회 개요**
 	![](figures/getTagStrmList-interactoin.png)
+	
+	- **코드**: https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/DeviceActivity.java#L64-L125
 
-- 태그스트림 로그 조회
+- **태그스트림 로그 조회**
 	![](figures/getTagStrmLog-interactoin.png)
+	
+	- **코드**: https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/TagStrmLogActivity.java#L83-L114
 
-- 제어 명령 보내기
+- **제어 명령 보내기**
 	![](figures/sendCtrlMsg-interactoin.png)
+	
+	- **코드**: https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/DeviceActivity.java#L148-L182
 
 #### 3.3.1 태그스트림 API  	
 ---
-- **APICallback<T>**
+- **APICallback\<T\>**
 	- 태그스트림 API (예, **TagStrmApiNew**의 태그스트림 목록 조회 기능, 태그스트림 로그 조회 기능,  제어 명령 보내기 기능) 실행시 호출되는 콜백 객체의 인터페이스로서, 이 인터페이스 타입의 객체를 **TagStrmApiNew** 객체 생성 시에 설정해 줘야 한다. 
 	- **메소드**
 		- **void onStart()**: 태그스트림 API가 시작될 때 수행할 작업
@@ -48,7 +58,7 @@
 ---
 - **TagStrmApiResponse**
 	- IoTMakers의 태그스트림의 수집데이터 이력 조회 및 디바이스에 제어 요청에 대한 응답 클래스
-	- Method
+	- **메소드**
 	
 		| Method | Description|
 		|:----------| :----------|
@@ -58,8 +68,7 @@
 ---
 - **TagStrm**
 	- 태그스트림 정보 클래스, 디바이스에 등록된 태그스트림 조회 시 태그스트림에 대한 정보를 확인할 수 있다.
-
-	- Attributes
+	- **속성**
 	
 		| Attribute | Description|
 		|:----------| :----------|
@@ -76,8 +85,7 @@
 		
 - **Log**
 	- 태그스트림 수집데이터 정보 클래스, 디바이스에 등록된 태그스트림 수집 이력 조회 시 수집데이터에 대한 정보를 확인할 수 있다.
-
-	- Attributes
+	- **속성**
 	
 		| Attribute | Description|
 		|:----------| :----------|
