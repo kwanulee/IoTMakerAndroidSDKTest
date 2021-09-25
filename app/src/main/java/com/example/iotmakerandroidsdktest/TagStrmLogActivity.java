@@ -92,6 +92,10 @@ public class TagStrmLogActivity extends AppCompatActivity {
                             if (response.getResponseCode().equals(ApiConstants.CODE_OK)) {
                                 ArrayList<Log> logs = response.getLogs();
                                 StringBuffer result_str = new StringBuffer();
+                                if (logs == null) {
+                                    Toast.makeText(TagStrmLogActivity.this,R.string.no_logs,Toast.LENGTH_SHORT).show();
+                                    return;
+                                }
                                 for(Log log : logs){
                                     Object tagValue = log.getAttributes().get(mTagStrm.getTagStrmId());
 

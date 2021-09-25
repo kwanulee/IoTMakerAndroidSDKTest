@@ -13,4 +13,6 @@
     <string name="common_wait">잠시만 기다려주세요</string>
     <string name="login_fail">로그인 실패 \n</string>
     <string name="devicelist_fail">디바이스 목록 읽기 실패 \n</string>
+
+    <string name="no_logs">조회된 로그가 없습니다.</string>
 </resources>

@@ -85,8 +85,8 @@ public class DeviceActivity extends AppCompatActivity{
                         android.R.layout.simple_list_item_1, tagStrm_names.toArray());
 
                 // 리스트뷰에 어뎁터 객체 연결
-                mListView.setAdapter(dAdapter);
                 mListView = findViewById(R.id.lv_tagstrm_list);
+                mListView.setAdapter(dAdapter);
                 mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
