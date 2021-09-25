@@ -1,23 +1,20 @@
----
-[**이전**:3.2 디바이스 목록 및 디바이스 상세 조회](devices.md)
-
----
+[**이전**: 3.2 디바이스 목록 및 디바이스 상세 조회](devices.md)
 
 ### 3.3 디바이스 태그스트림 목록, 태그스트림 로그 조회와 제어 명령 보내기
 - **태그스트림 목록 조회 개요**
 	![](figures/getTagStrmList-interactoin.png)
 	
-	- **코드**: https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/DeviceActivity.java#L64-L125
+	- [관련 코드 링크](https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/DeviceActivity.java#L64-L125)
 
 - **태그스트림 로그 조회**
 	![](figures/getTagStrmLog-interactoin.png)
 	
-	- **코드**: https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/TagStrmLogActivity.java#L83-L114
+	- [관련 코드 링크](https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/TagStrmLogActivity.java#L83-L114)
 
 - **제어 명령 보내기**
 	![](figures/sendCtrlMsg-interactoin.png)
 	
-	- **코드**: https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/DeviceActivity.java#L148-L182
+	- [관련 코드 링크](https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/DeviceActivity.java#L148-L182)
 
 #### 3.3.1 태그스트림 API  	
 ---

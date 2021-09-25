@@ -1,15 +1,13 @@
----
-[**이전**:3.1 플랫폼 로그인](login.md)
 
----
+[**이전**: 3.1 플랫폼 로그인](login.md)
+
 
 ### 3.2 디바이스 목록 및 디바이스 상세 조회
 - **디바이스 API 동작 개요**
 
 	![](figures/DeviceNewApiNew-interaction.png)
 	
-- **관련 코드**
-	- https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/DeviceListActivity.java#L52-L92
+	- [관련 코드 링크](https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/DeviceListActivity.java#L52-L92)
 	
 #### 3.2.1 디바이스 API  	
 ---
@@ -59,4 +57,4 @@
 		
 		
 ---
-[**다음**: 3.3 디바이스 태그스트림 목록, 태그스트림 로그 조회와 제어 명령 보내기](tagstrm.md)
+[**다음**: 3.3 디바이스 태그스트림 목록, 태그스트림 로그 조회와 제어 명령 보내기](tagStrm.md)

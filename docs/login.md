@@ -1,7 +1,4 @@
----
 [**이전**: 3. IoTMakers 연동 Android 앱 예제](readme.md#3)
-
----
 
 ### 3.1 플랫폼 로그인
 - 앱을 통해 플랫폼에 로그인을 하는 기능으로서, 플랫폼에 접근할 수 있는 다양한 API를 활용하기 위해서 필수적인 **Access token**을 얻는다.
@@ -12,8 +9,7 @@
 - **플랫폼 로그인 API 개요**
 	![](figures/gigaiotoauthnew-interaction.png)
 	
-- **관련 코드**
-	- https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/LoginActivity.java#L78-L118
+	- [관련 코드 링크](https://github.com/kwanulee/IoTMakerAndroidSDKTest/blob/main/app/src/main/java/com/example/iotmakerandroidsdktest/LoginActivity.java#L78-L118)
 	
 ---
 #### 3.1.1 플랫폼 로그인 API 
