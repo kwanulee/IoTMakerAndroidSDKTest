@@ -8,4 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "IoTMakerAndroidSDKTest"
 include ':app'
-include ':iotmakers.sdk.android-01.03.02-20200408'
+include ':iotmakers_sdk_android'
