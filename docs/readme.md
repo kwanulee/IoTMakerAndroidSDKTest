@@ -36,49 +36,31 @@
 
 <a name="2"></a>
 ## 2. Android 앱 프로젝트 설정
-- 사용 Android Studio 버전: **Android Studio Arctic Fox -2020.3.1 Patch2** 
-- 위 버전의 **Android Studio**는 **Gradle or Exclipse Project를 import하는 기능에 오류** 때문에 아래와 같이 **수동**으로 **IoTMakers Android SDK**를 설정해줘야 합니다. 다음 내용은 Android Studio의 업데이트에 따라 변경될 수 있습니다.
+- 사용 Android Studio 버전: **Android Studio Dolphin | 2021.3.1** 
 
-### 2.1 Android 앱 프로젝트에 Android SDK 설정
+### 2.1 Android 앱 프로젝트에 IoTMakers Android SDK 설정
 
 1. Android Studio를 통해서 **Android 프로젝트를 생성**
 	- *IoTMakerAndroidSDKTest* 이름의 Android 프로젝트를 생성한다.
 
-2. **Android SDK 다운로드**
+2. **IoTMakers Android SDK 다운로드**
 	- **IoTMakers 포탈**에서 [**IoT개발** > **SDK 다운로드**](https://iotmakers.kt.com/openp/index.html#/sdk) 를 클릭합니다.
-	- [**Android SDK**](https://iotmakers.kt.com/openp/assets/files/iotmakers_sdk_android_1.3.2.zip)를 다운로드한 후, 압축을 해제합니다.
-3. 압축 해제한 **IoTMakers Android SDK 폴더(*iotmakers.sdk.android-01.03.02-20200408*)를 생성된 Android 프로젝트로 복사**해 온다.
-4. **IoTMakers Android SDK 폴더(iotmakers.sdk.android-01.03.02-20200408)**의 **build.gradle** 파일을 다음 그림과 같이 수정한다.
-	- **allprojects** {..} 주석처리
-	- **wrapper**{...} 를 **task wrapper(type: Wrapper)**{...} 로 변경
-		- [참고 링크](https://docs.gradle.org/current/userguide/upgrading_version_4.html#rel4.8:configure_internal_tasks)
+	- [**Android SDK**](https://iotmakers.kt.com/openp/assets/files/iotmakers_sdk_android_1.3.3.zip)를 다운로드한 후, 압축을 해제합니다.
+
+3. 작업 중인 Android Project(*IoTMakerAndroidSDKTest*) 최상단에서 우클릭하여 **Open Module Setting** 선택
+2. Modules에서 '**+**' 버튼 클릭하여 **Import Gradle Project** 선택 후 '**Next**'
+3. Source directory에 압축 해제한 SDK 파일(*iotmakers\_sdk\_android*) 선택 후 '**OK**'
+4. **Open Module Setting**의 **Dependencies**에서 app 선택 후 **Declared Dependencies** '**+**' > **Module Dependency**
+5. 추가한 모듈 선택하고 '**OK**'
+6. 작업 중인 Android Project 최상단 내 **settings.gradle** 파일의 import 부분에 해당 모듈이 정상적으로 선언되어 있는지 확인
 
 
-	![](figures/android-studio-import-module.jpg)
-
-5. **app** 모듈의 **build.gradle** 파일을 열어, dependencies 부분에 다음 라인을 추가한다.
-
-	```
-	dependencies {
-		...
-		implementation project(':iotmakers.sdk.android-01.03.02-20200408')
-	}
-	```	
-4. Android 프로젝트의 **settings.gradle**에 다음 라인을 추가한다.
-
-	```
-	include ':iotmakers.sdk.android-01.03.02-20200408'
-	```
-	
-5. **sync now**를 클릭하여 재 빌드 한다.
-
---- 
 ### 2.2 최신 Android 플랫폼 버전 반영을 위한 설정 변경
-- **IoTMakers** 포탈에 배포된 SDK는 Android4.0 기반으로 만들어진 것이므로, **최신 Android 플랫폼 버전 (Android 11.0, API level 31)**에서 정상적으로 동작시키기 위해서 다음과 같은 추가작업을 수행해야 합니다.
-	- **build.gradle (Module: iotmakers.sdk.android-01.03.02-20200408)** 스크립트 수정
+- **IoTMakers** 포탈에 배포된 SDK는 Android4.0 기반으로 만들어진 것이므로, **최신 Android 플랫폼 버전 (API level 31 이상)**에서 정상적으로 동작시키기 위해서 다음과 같은 추가작업을 수행해야 합니다.
+	- **build.gradle (Module: iotmakers\_sdk\_android)** 스크립트 수정 후, 상단의 **Sync Now** 클릭
+		- **allprojects** {..} 주석처리
 		- "buildToolsVersion "28.0.3" 삭제
-		- 상단의 **Sync Now** 클릭
-
+	- **AndroidManifest.xml** 수정
 		- \<application\> 부분에 **android:usesCleartextTraffic="true"** 로 설정
 		
 			```xml
